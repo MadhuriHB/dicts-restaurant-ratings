@@ -1,3 +1,5 @@
+from random import choice
+
 def restaurant_ratings(filename):
 
     myDict = {}
@@ -20,10 +22,11 @@ def restaurant_ratings(filename):
         
 
             myDict[query_restaurant] = query_rating  
-            myKeys = sorted(myDict)  
+            myKeys = sorted(myDict)
+            #random_restaurant = choice(myKeys)
 
-            for items in myKeys:
-                print "%s is rated at %s." %(items, myDict[items])
+            for key in myKeys:
+                print "%s is rated at %s." %(key, myDict[key])
             input_file.close()
 
 restaurant_ratings("scores.txt")

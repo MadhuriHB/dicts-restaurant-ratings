@@ -8,8 +8,8 @@ def restaurant_ratings(filename):
         words = line.split(":")
         myDict[words[0]] = words[1]  
     myKeys = sorted(myDict)  
-    for items in myKeys:
-        print "%s is rated at %s." %(items, myDict[items])
+    for key in myKeys:
+        print "%s is rated at %s." %(key, myDict[key])
     input_file.close()
 
 restaurant_ratings("scores.txt")
